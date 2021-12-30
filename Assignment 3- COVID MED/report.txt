@@ -1,0 +1,26 @@
+Observations on a (shortened) study of the Minimum Edit Distance function.
+
+The algorithm's performance graph was a shallow exponential, which makes sense since we're making n*m computations. This is obviously far superior
+to the recursive alternative, and with even a modest computer we can get results relatively quickly (though I was not able to process the full genomes
+before the deadline for this assignment.) For a rapidly evolving virus, being able to parse data efficiently is self evidently important for any attempts 
+to trace and contain specific strains. The table below shows the similarity scores at a depth of 1000 between all 14 strains. The Spanish strains(3-6) in 
+particular are remarkably similar.
+
+Strain		1 	2 	3 	4 	5 	6 	7 	8 	9 	10 	11 	12 	13 	14
+	1 	0 	989 	911 	911 	911 	911 	983 	875 	845 	904 	839 	833 	953 	914
+	2 	989 	0 	908 	908 	908 	908 	994 	872 	842 	901 	836 	830 	950 	911
+	3 	911 	908 	0 	1000 	1000 	1000 	902 	956 	926 	979 	920 	914 	950 	989
+	4 	911 	908 	1000 	0 	1000 	1000 	902 	956 	926 	979 	920 	914 	950 	989
+	5 	911 	908 	1000 	1000 	0 	1000 	902 	956 	926 	979 	920 	914 	950 	989	
+	6 	911 	908 	1000 	1000 	1000 	0 	902 	956 	926 	979 	920 	914 	950 	989
+	7 	983 	994 	902 	902 	902 	902 	0 	866 	836 	907 	830 	836 	944 	905
+	8 	875 	872 	956 	956 	956 	956 	866 	0 	962 	943 	956 	950 	914 	953
+	9 	845 	842 	926 	926 	926 	926 	836 	962 	0 	913 	986 	980 	884 	923
+	10 	904 	901 	979 	979 	979 	979 	907 	943 	913 	0 	907 	913 	943 	990
+	11 	839 	836 	920 	920 	920 	920 	830 	956 	986 	907 	0 	994 	878 	917
+	12 	833 	830 	914 	914 	914 	914 	836 	950 	980 	913 	994 	0 	872 	911
+	13 	953 	950 	950 	950 	950 	950 	944 	914 	884 	943 	878 	872 	0 	953
+	14 	914 	911 	989 	989 	989 	989 	905 	953 	923 	990 	917 	911 	953 	0
+	
+	
+	
