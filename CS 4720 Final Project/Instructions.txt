@@ -1,0 +1,14 @@
+The program was tested on a Windows machine using Cygwin. It requires no special libraries, so it should theoretic-
+ally work on any machine.
+
+The server program should be running first, make sure to run with 1 argument for the socket you wish to use.
+
+The client program needs to run with 2 arguments, host address and port number. Once connected, the program should 
+run.
+
+The server will start with a play area deck, a main deck, and a hand, deck and personal play area for each player 
+that connects. from there, you can fill those decks with cards, draw cards from one to another, and play specific 
+cards from one to another, shuffle decks, check which cards are in a hand or deck, etc. 
+
+I do not reccomend playing for stakes, since in it's current state any player can view any other players hand. We 
+can only ask so much of human nature.

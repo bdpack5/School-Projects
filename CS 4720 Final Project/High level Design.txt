@@ -1,0 +1,35 @@
+--HIGH LEVEL DESIGN FOR CARDGAME PROGRAM--
+
+--Main Concept--
+
+Throughout the pandemic I've been able to approximate most of my old social activities with simple online tools
+(which probably speaks poorly of my sociability), but over the last few months there has been an activity I haven't
+been able to replicate adequately, and I was planning on trying out the skills learned in this course to make up 
+for that shortcoming. So this project is a 'beta' version of my planned server based generic card game virtual 
+table.
+
+--Main Structure--
+
+The main data structures in the program consist of a Card class, a Deck class (which covers the functionality of 
+any group of cards, from the cards on the table to a players hand to an actual deck of cards.) and the client keeps 
+track of all decks with an arraylist. The client programs commands from the players inputs and sends them to the 
+server, which copies them to all the clients. The bulk of the computation, then, is dealt with client side.
+
+Since we own a variety of complex card games, the game does not have a built in deck, and instead expects the players
+to fill in the details of the cards while the program runs. It is assumed that a physical deck is on hand for one
+(trustworthy) participant, who will either fill out the main deck before play begins or, more likely, create card 
+objects as they are physically drawn.
+
+--Notably Absent--
+
+Since this program is meant to be able to emulate play at a table, and cover a variety of games, it is expected 
+that the players will keep track of the rules, so no games rules are built in to the program. Likewise, no artificial
+opponent is provided. 
+
+Other features are planned to be added to this 'beta' version. They are as follows:
+1. A GUI.
+2. Loadable/prebuilt decks of cards. 
+3. A main executable or jar file version, for ease of use.
+4. tokens/chips.
+5. editing and deleting cards and decks.
+

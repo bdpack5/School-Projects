@@ -1,0 +1,33 @@
+--SERVER--
+
+This program is almost a direct copy of the Chat server made in assignment 10. This basically comes down to the 
+ease of passing information between the different clients and the ability of clients to get information. In this 
+scheme, all clients have access to all information in the game, meaning the great bulk of the program is in the 
+client side.
+
+--CLIENT--
+
+Since this is the bulk of the project, I'll take note of important or interesting decisions in order, and based on 
+the line of code in which the pertinent decision comes up:
+
+6:	An ArrayList was chosen for the deckList object so no limit on size would need to be chosen.
+
+14-39:	The Card class hold two strings, name and text. the name should be seen as the shorter description of the 
+card, and the text can be longer, since it isn't what's listed when decks are examined.
+
+52: 	Deque was chosen for the card decks since it is the suggested implementation of stack by Oracle, and that 
+is the logical way to simulate a deck of cards.
+
+73-84:	I was very happy to find the shuffle function of arraylist, so this worked out pretty well.
+
+134-169: This translates the commands taken from the server and actually effects them. Since the commands are in
+an ordered list, all clients should be in synch.
+
+178-317: Most of this is a placeholder for GUI code. I foolishly chose the C# GUIs course for that requirement, 
+and was not able to teach myself java GUIs before the due date for this assignment.
+
+338-352: Shuffling was a challenge, since the shuffle function is randomized it had to happen once and then the
+new deck configuration had to be copied over to the rest of the clients so the game remains synchronized. In the end,
+both server and client had a special section of the thread to load the entire shuffle at once, to avoid strange is-
+sues with other clients commands.
+
